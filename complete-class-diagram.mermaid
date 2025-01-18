@@ -1,0 +1,216 @@
+classDiagram
+    class Utilisateur {
+        +userID: int
+        +email: string
+        +password: string
+        +statut: string
+        +dateCreation: date
+        +dernierConnexion: date
+    }
+
+    class Roles {
+        <<enumeration>>
+        ETUDIANT
+        ENSEIGNANT
+        ADMIN
+        SURVEILLANT
+        CAISSIER
+        RESPO_PEDAGO
+        +permissions: string[]
+    }
+
+    class Etudiant {
+        +matricule: string
+        +nom: string
+        +prenom: string
+        +dateNaiss: date
+        +lieuNaiss: string
+        +sexe: string
+        +adresse: string
+        +telephone: string
+        +photo: string
+        +dateInscription: date
+        +prenomNomTuteur: string
+        +telephoneTuteur: string
+        +carteEtudiant: string
+        +qrCode: string
+        +statut: string
+    }
+
+    class Enseignant {
+        +matricule: string
+        +nom: string
+        +prenom: string
+        +telephone: string
+        +email: string
+        +specialite: string
+        +totalHeures: int
+        +tauxHoraire: float
+    }
+
+    class Filiere {
+        +filiereID: int
+        +libelle: string
+        +description: string
+        +cout: float
+        +duree: int
+        +responsableID: int
+        +dateCreation: date
+        +statut: string
+    }
+
+    class Specialite {
+        +specialiteID: int
+        +libelle: string
+        +coefficient: float
+        +description: string
+    }
+
+    class NiveauAcademic {
+        <<enumeration>>
+        CAP
+        BT
+        BTS
+        LICENCE1
+        LICENCE2
+        LICENCE3
+        MASTER1
+        MASTER2
+        +duree: int
+        +credits: int
+    }
+
+    class AnneeAcademique {
+        +anneeID: int
+        +libelle: string
+        +dateDebut: date
+        +dateFin: date
+        +statut: string
+    }
+
+    class Semestre {
+        +semestreID: int
+        +anneeAcademiqueID: int
+        +numero: int
+        +dateDebut: date
+        +dateFin: date
+        +statut: string
+    }
+
+    class Cours {
+        +coursID: int
+        +code: string
+        +libelle: string
+        +description: string
+        +credits: int
+        +volumeHoraire: int
+        +specialiteID: int
+        +statut: string
+    }
+
+    class Programme {
+        +programmeID: int
+        +filiereID: int
+        +coursID: int
+        +semestreID: int
+        +enseignantID: int
+        +volumeHoraire: int
+        +coefficient: float
+    }
+
+    class SessionCours {
+        +sessionID: int
+        +coursID: int
+        +enseignantID: int
+        +salleID: int
+        +jourID: int
+        +heure_debut: time
+        +heure_fin: time
+        +nombreMaxEtudiants: int
+        +statut: string
+    }
+
+    class Absence {
+        +absenceID: int
+        +sessionCoursID: int
+        +etudiantID: int
+        +date: date
+        +justifie: boolean
+        +commentaire: string
+    }
+
+    class Epreuve {
+        +epreuveID: int
+        +type: string
+        +coursID: int
+        +semestreID: int
+        +date: date
+        +heure: time
+        +duree: int
+        +salleID: int
+        +surveillantID: int
+        +coefficient: float
+        +statut: string
+    }
+
+    class Note {
+        +noteID: int
+        +etudiantID: int
+        +epreuveID: int
+        +note: float
+        +appreciation: string
+        +dateCreation: date
+    }
+
+    class Paiement {
+        +paiementID: int
+        +matriculeEtudiant: string
+        +reference: string
+        +date: date
+        +mois: string
+        +montant: float
+        +type: string
+        +statut: string
+    }
+
+    class Salle {
+        <<enumeration>>
+        SALLE1
+        SALLE2
+        SALLE3
+        SALLE4
+        SALLE5
+        +capacite: int
+    }
+
+    class Jour {
+        <<enumeration>>
+        LUNDI
+        MARDI
+        MERCREDI
+        JEUDI
+        VENDREDI
+        SAMEDI
+    }
+
+    Utilisateur <|-- Etudiant
+    Utilisateur <|-- Enseignant
+    Utilisateur "*" -- "1..*" Roles
+    Filiere "1" --> "1..*" Programme
+    Programme "*" --> "1" Cours
+    Cours "1" --> "*" SessionCours
+    SessionCours "*" -- "*" Etudiant
+    Absence "*" --> "1" SessionCours
+    Absence "*" --> "1" Etudiant
+    Filiere "1..*" --> "1..*" Specialite
+    Filiere "1..*" --> "1" NiveauAcademic
+    AnneeAcademique "1" --> "*" Semestre
+    Semestre "1" --> "*" Programme
+    Epreuve "*" --> "1" Cours
+    Epreuve "1" --> "*" Note
+    Note "*" --> "1" Etudiant
+    Paiement "*" --> "1" Etudiant
+    SessionCours "*" --> "1" Salle
+    SessionCours "*" --> "1" Jour
+    SessionCours "*" --> "1" Enseignant
+    Etudiant "*" --> "1..*" Filiere

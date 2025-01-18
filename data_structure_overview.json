@@ -1,0 +1,170 @@
+{
+  "utilisateurs": [
+    {
+      "userID": 1001,
+      "email": "admin.principal@ecole.com",
+      "statut": "actif",
+      "role": ["ADMIN"],
+      "dateCreation": "2024-01-01"
+    },
+    {
+      "userID": 1002,
+      "email": "jean.dubois@ecole.com",
+      "statut": "actif",
+      "role": ["ENSEIGNANT"],
+      "dateCreation": "2024-01-05"
+    }
+  ],
+  "enseignants": [
+    {
+      "matricule": "ENS001",
+      "userID": 1002,
+      "nom": "Dubois",
+      "prenom": "Jean",
+      "telephone": "+33612345678",
+      "specialite": "Informatique",
+      "tauxHoraire": 45.00,
+      "totalHeures": 384
+    },
+    {
+      "matricule": "ENS002",
+      "userID": 1003,
+      "nom": "Martinez",
+      "prenom": "Sophie",
+      "telephone": "+33623456789",
+      "specialite": "Mathématiques",
+      "tauxHoraire": 45.00,
+      "totalHeures": 320
+    }
+  ],
+  "etudiants": [
+    {
+      "matricule": "ETU20240001",
+      "userID": 2001,
+      "nom": "Martin",
+      "prenom": "Lucas",
+      "dateNaiss": "2006-05-15",
+      "telephone": "+33634567890",
+      "dateInscription": "2024-01-10",
+      "filiereID": 1
+    },
+    {
+      "matricule": "ETU20240002",
+      "userID": 2002,
+      "nom": "Bernard",
+      "prenom": "Emma",
+      "dateNaiss": "2005-11-22",
+      "telephone": "+33645678901",
+      "dateInscription": "2024-01-10",
+      "filiereID": 2
+    }
+  ],
+  "filieres": [
+    {
+      "filiereID": 1,
+      "libelle": "Développement Web",
+      "niveauAcademic": "BTS",
+      "cout": 5500.00,
+      "duree": 24,
+      "responsableID": 1002
+    },
+    {
+      "filiereID": 2,
+      "libelle": "Réseaux et Sécurité",
+      "niveauAcademic": "LICENCE3",
+      "cout": 6500.00,
+      "duree": 36,
+      "responsableID": 1003
+    }
+  ],
+  "specialites": [
+    {
+      "specialiteID": 1,
+      "libelle": "Développement Frontend",
+      "coefficient": 1.2
+    },
+    {
+      "specialiteID": 2,
+      "libelle": "Développement Backend",
+      "coefficient": 1.3
+    }
+  ],
+  "cours": [
+    {
+      "coursID": 1,
+      "code": "DEV101",
+      "libelle": "Introduction au HTML/CSS",
+      "credits": 6,
+      "volumeHoraire": 48,
+      "specialiteID": 1
+    },
+    {
+      "coursID": 2,
+      "code": "DEV102",
+      "libelle": "JavaScript Fondamentaux",
+      "credits": 8,
+      "volumeHoraire": 64,
+      "specialiteID": 1
+    }
+  ],
+  "sessionsCours": [
+    {
+      "sessionID": 1,
+      "coursID": 1,
+      "enseignantID": 1002,
+      "salleID": 1,
+      "jourID": "LUNDI",
+      "heure_debut": "08:00",
+      "heure_fin": "12:00",
+      "nombreMaxEtudiants": 25
+    }
+  ],
+  "epreuves": [
+    {
+      "epreuveID": 1,
+      "type": "PARTIEL",
+      "coursID": 1,
+      "date": "2024-03-15",
+      "heure": "14:00",
+      "duree": 180,
+      "coefficient": 0.4
+    }
+  ],
+  "notes": [
+    {
+      "noteID": 1,
+      "etudiantID": 2001,
+      "epreuveID": 1,
+      "note": 15.5,
+      "appreciation": "Très bon travail"
+    },
+    {
+      "noteID": 2,
+      "etudiantID": 2002,
+      "epreuveID": 1,
+      "note": 14.0,
+      "appreciation": "Bon travail"
+    }
+  ],
+  "paiements": [
+    {
+      "paiementID": 1,
+      "matriculeEtudiant": "ETU20240001",
+      "reference": "PAY20240110001",
+      "date": "2024-01-10",
+      "montant": 1833.33,
+      "type": "MENSUALITE",
+      "mois": "JANVIER"
+    }
+  ],
+  "absences": [
+    {
+      "absenceID": 1,
+      "sessionCoursID": 1,
+      "etudiantID": 2002,
+      "date": "2024-01-15",
+      "justifie": true,
+      "commentaire": "Certificat médical fourni"
+    }
+  ]
+}
