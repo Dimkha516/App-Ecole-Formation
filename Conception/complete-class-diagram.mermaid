@@ -29,11 +29,13 @@ classDiagram
         +adresse: string
         +telephone: string
         +photo: string
+        +filiereID
+        +niveauAcademicID
         +dateInscription: date
         +prenomNomTuteur: string
         +telephoneTuteur: string
-        +carteEtudiant: string
-        +qrCode: string
+        +carteEtudiantID: string
+        +qrCodeID: string
         +statut: string
     }
 
@@ -43,13 +45,12 @@ classDiagram
         +prenom: string
         +telephone: string
         +email: string
-        +specialite: string
+        +specialiteID: int
         +totalHeures: int
         +tauxHoraire: float
     }
 
     class Filiere {
-        +filiereID: int
         +libelle: string
         +description: string
         +cout: float
@@ -60,7 +61,6 @@ classDiagram
     }
 
     class Specialite {
-        +specialiteID: int
         +libelle: string
         +coefficient: float
         +description: string
@@ -81,7 +81,6 @@ classDiagram
     }
 
     class AnneeAcademique {
-        +anneeID: int
         +libelle: string
         +dateDebut: date
         +dateFin: date
@@ -89,7 +88,6 @@ classDiagram
     }
 
     class Semestre {
-        +semestreID: int
         +anneeAcademiqueID: int
         +numero: int
         +dateDebut: date
@@ -119,7 +117,6 @@ classDiagram
     }
 
     class SessionCours {
-        +sessionID: int
         +coursID: int
         +enseignantID: int
         +salleID: int
