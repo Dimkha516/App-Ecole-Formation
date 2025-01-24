@@ -1,3 +1,4 @@
+
 classDiagram
     class Utilisateur {
         +userID: int
@@ -29,8 +30,8 @@ classDiagram
         +adresse: string
         +telephone: string
         +photo: string
-        +filiereID
-        +niveauAcademicID
+        +filiereID: int
+        +niveauAcademicID: int
         +dateInscription: date
         +prenomNomTuteur: string
         +telephoneTuteur: string
@@ -192,7 +193,7 @@ classDiagram
 
     Utilisateur <|-- Etudiant
     Utilisateur <|-- Enseignant
-    Utilisateur "*" -- "1..*" Roles
+    Utilisateur "*" -- "*" Roles
     Filiere "1" --> "1..*" Programme
     Programme "*" --> "1" Cours
     Cours "1" --> "*" SessionCours
@@ -210,4 +211,4 @@ classDiagram
     SessionCours "*" --> "1" Salle
     SessionCours "*" --> "1" Jour
     SessionCours "*" --> "1" Enseignant
-    Etudiant "*" --> "1..*" Filiere
+    Etudiant "*" --> "1" Filiere

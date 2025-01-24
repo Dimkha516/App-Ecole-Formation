@@ -1,0 +1,451 @@
+{
+  "datas": {
+    "Utilisateurs": [
+      {
+        "userID": 1,
+        "nom": "Baba",
+        "prenom": "Diop",
+        "email": "baba@example.com",
+        "password": "test123",
+        "profil": "Admin",
+        "photo": "https://res.cloudinary.com/dytchfsin/image/upload/v1725810785/clients_photos/Madame_1725810784.png",
+        "dateCreation": "2022-01-01T00:00:00.000Z",
+        "dernierConnexion": "2022-01-01T00:00:00.000Z"
+      },
+      {
+        "userID": 2,
+        "nom": "Khady",
+        "prenom": "Sall",
+        "email": "khady@example.com",
+        "password": "test123",
+        "profil": "Responsable Pédagogique",
+        "dateCreation": "2022-01-02T00:00:00.000Z",
+        "dernierConnexion": "2022-01-01T00:00:00.000Z"
+      },
+      {
+        "userID": 3,
+        "nom": "Moussa",
+        "prenom": "Fall",
+        "email": "moussa@example.com",
+        "password": "test123",
+        "profil": "Surveillant",
+        "dateCreation": "2022-01-03T00:00:00.000Z",
+        "dernierConnexion": "2022-01-01T00:00:00.000Z"
+      },
+      {
+        "userID": 4,
+        "nom": "Lamine",
+        "prenom": "Gaye",
+        "email": "lamine@example.com",
+        "password": "test123",
+        "profil": "Enseignant",
+        "dateCreation": "2022-01-04T00:00:00.000Z",
+        "dernierConnexion": "2022-01-01T00:00:00.000Z"
+      },
+      {
+        "userID": 5,
+        "nom": "Matar",
+        "prenom": "Mbow",
+        "email": "chris.johnson@example.com",
+        "password": "test123",
+        "profil": "Étudiant",
+        "dateCreation": "2022-01-05T00:00:00.000Z",
+        "dernierConnexion": "2022-01-01T00:00:00.000Z"
+      },
+      {
+        "userID": 6,
+        "nom": "Fatima",
+        "prenom": "Lo",
+        "email": "fa@example.com",
+        "password": "test123",
+        "profil": "Étudiant",
+        "dateCreation": "2022-01-05T00:00:00.000Z",
+        "dernierConnexion": "2022-01-01T00:00:00.000Z"
+      }
+    ],
+    "Enseignants": [
+      {
+        "enseignantID": 1,
+        "profil": "enseignant",
+        "userID": 1,
+        "matricule": "ENS001",
+        "nom": "Baba",
+        "prenom": "Diop",
+        "email": "enseignant1@gmail.com",
+        "telephone": "77 123 45 67",
+        "specialite": "Informatique",
+        "totalHeures": 20,
+        "tauxHoraire": 5000
+      },
+      {
+        "enseignantID": 2,
+        "profil": "enseignant",
+        "userID": 2,
+        "matricule": "ENS002",
+        "nom": "Ousmane",
+        "prenom": "Sakho",
+        "email": "enseignant2@gmail.com",
+        "telephone": "7822188O9",
+        "specialite": "Mathématiques",
+        "totalHeures": 15,
+        "tauxHoraire": 4500
+      },
+      {
+        "enseignantID": 3,
+        "profil": "enseignant",
+        "userID": 3,
+        "matricule": "ENS003",
+        "nom": "khadidiatou",
+        "prenom": "Samb",
+        "email": "enseignant3@gmail.com",
+        "telephone": "704438322",
+        "specialite": "Comptabilité",
+        "totalHeures": 12,
+        "tauxHoraire": 4000
+      }
+    ],
+    "Etudiants": [
+      {
+        "etudiantID": 1,
+        "profil": "étudiant",
+        "userID": 4,
+        "matricule": "ETU001",
+        "nom": "Matar",
+        "prenom": "Mbow",
+        "email": "etudiant1@gmail.com",
+        "telephone": "77 123 45 67",
+        "dateNaiss": "2000-01-01",
+        "lieuNaiss": "Dakar",
+        "sexe": "M",
+        "adresse": "Médina",
+        "téléphone": "77 123 45 67",
+        "photo": "avatar.png",
+        "filiere": "Informatique",
+        "niveauAcademique": "Licence1",
+        "dateInscription": "2022-01-01",
+        "prenomNomTuteur": "Salimata Kane",
+        "telephoneTuteur": "77 123 45 67",
+        "carteEtudiant": "matarCard.png",
+        "qrCode": "matarQrCode.png",
+        "statut": "ACTIF"
+      },
+      {
+        "etudiantID": 2,
+        "profil": "étudiant",
+        "userID": 5,
+        "matricule": "ETU002",
+        "nom": "Rama",
+        "prenom": "Lo",
+        "email": "etudiant1@gmail.com",
+        "telephone": "77 123 45 67",
+        "dateNaiss": "2000-01-01",
+        "lieuNaiss": "Thies",
+        "sexe": "F",
+        "adresse": "Colobane",
+        "téléphone": "77 123 45 67",
+        "photo": "avatar.png",
+        "filiere": "Comptabilité-Gestion",
+        "niveauAcademique": "Licence2",
+        "dateInscription": "2022-01-01",
+        "prenomNomTuteur": "Pala mane",
+        "telephoneTuteur": "77 123 45 67",
+        "carteEtudiant": "ramaCard.png",
+        "qrCode": "ramaQrCode.png",
+        "statut": "ACTIF"
+      },
+      {
+        "etudiantID": 6,
+        "profil": "étudiant",
+        "userID": 6,
+        "matricule": "ETU005",
+        "nom": "Jojo",
+        "prenom": "Baldé",
+        "email": "etudiant1@gmail.com",
+        "telephone": "77 123 45 67",
+        "dateNaiss": "2000-01-01",
+        "lieuNaiss": "Louga",
+        "sexe": "M",
+        "adresse": "Rufisque",
+        "téléphone": "77 123 45 67",
+        "photo": "avatar.png",
+        "filiere": "Génie-civil",
+        "niveauAcademique": "Master1",
+        "dateInscription": "2022-01-01",
+        "prenomNomTuteur": "Salimata Kane",
+        "telephoneTuteur": "77 123 45 67",
+        "carteEtudiant": "jojoCard.png",
+        "qrCode": "jojoQrCode.png",
+        "statut": "ACTIF"
+      }
+    ],
+    "Suveillants": [
+      {
+        "surveillantID": 1,
+        "userID": 7,
+        "matricule": "SUR001",
+        "nom": "Moussa",
+        "prenom": "Fall",
+        "telephone": "77 123 45 67"
+      },
+      {
+        "surveillantID": 2,
+        "userID": 8,
+        "matricule": "SUR002",
+        "nom": "Fatima",
+        "prenom": "Lo",
+        "telephone": "77 123 45 67"
+      }
+    ],
+
+    "Caissiers": [
+      {
+        "caissierID": 1,
+        "userID": 9,
+        "matricule": "CAI001",
+        "nom": "Khady",
+        "prenom": "Sall",
+        "telephone": "77 123 45 67"
+      },
+      {
+        "caissierID": 2,
+        "userID": 10,
+        "matricule": "CAI002",
+        "nom": "Baba",
+        "prenom": "Diop",
+        "telephone": "77 123 45 67"
+      }
+    ],
+
+    "ResponsablesPedago": [
+      {
+        "responsableID": 1,
+        "userID": 11,
+        "matricule": "RESP001",
+        "nom": "Khady",
+        "prenom": "Sall",
+        "telephone": "77 123 45 67"
+      },
+      {
+        "responsableID": 2,
+        "userID": 12,
+        "matricule": "RESP002",
+        "nom": "Baba",
+        "prenom": "Diop",
+        "telephone": "77 123 45 67"
+      }
+    ],
+    "Programmes": [
+      {
+        "programmeID": 1,
+        "filiere": "Informatique",
+        "cours": "Base de données",
+        "semestre": "Semestre1",
+        "enseignant": "Papa Kairé",
+        "volumeHoraire": 20,
+        "coefficient": 3
+      },
+      {
+        "programmeID": 2,
+        "filiere": "Comptabilité",
+        "cours": "Comptabilité générale",
+        "semestre": "Semestre1",
+        "enseignant": "Mamadou Diop",
+        "volumeHoraire": 15,
+        "coefficient": 2
+      },
+      {
+        "programmeID": 3,
+        "filiere": "Génie-civil",
+        "cours": "Topographie",
+        "semestre": "Semestre1",
+        "enseignant": "Mamadou Diop",
+        "volumeHoraire": 12,
+        "coefficient": 2
+      }
+    ],
+    "Salles": [
+      {
+        "salleID": 1,
+        "code": "Salle1",
+        "localisation": "Bâtiment A",
+        "dispobilite": "Disponible",
+        "capacite": 50
+      },
+      {
+        "salleID": 2,
+        "code": "Salle2",
+        "localisation": "Bâtiment B",
+        "dispobilite": "Disponible",
+        "capacite": 30
+      },
+      {
+        "salleID": 3,
+        "code": "Salle3",
+        "localisation": "Bâtiment C",
+        "dispobilite": "Disponible",
+        "capacite": 40
+      }
+    ],
+    "SessionCours": [
+      {
+        "sessionID": 1,
+        "cours": "Base de données",
+        "enseignant": "Papa Kairé",
+        "salle": "Salle1",
+        "jour": "Lundi",
+        "heure_debut": "08:00",
+        "heure_fin": "10:00",
+        "nombreMaxEtudiants": 50,
+        "statut": "En cours"
+      },
+      {
+        "sessionID": 2,
+        "cours": "Comptabilité générale",
+        "enseignant": "Mamadou Diop",
+        "salle": "Salle2",
+        "jour": "Mardi",
+        "heure_debut": "10:00",
+        "heure_fin": "12:00",
+        "nombreMaxEtudiants": 30,
+        "statut": "En cours"
+      },
+      {
+        "sessionID": 3,
+        "cours": "Topographie",
+        "enseignant": "Mamadou Diop",
+        "salle": "Salle3",
+        "jour": "Mercredi",
+        "heure_debut": "14:00",
+        "heure_fin": "16:00",
+        "nombreMaxEtudiants": 40,
+        "statut": "En cours"
+      }
+    ],
+    "Absences": [
+      {
+        "absenceID": 1,
+        "sessionCours": "Base de données",
+        "etudiant": "Matar Mbow",
+        "date": "2022-01-01",
+        "justifie": "Oui",
+        "commentaire": "Maladie"
+      },
+      {
+        "absenceID": 2,
+        "sessionCours": "Comptabilité générale",
+        "etudiant": "Rama Lo",
+        "date": "2022-01-01",
+        "justifie": "Non",
+        "commentaire": "Absence non justifiée"
+      },
+      {
+        "absenceID": 3,
+        "sessionCours": "Topographie",
+        "etudiant": "Jojo Baldé",
+        "date": "2022-01-01",
+        "justifie": "Oui",
+        "commentaire": "Maladie"
+      }
+    ],
+
+    "Epreuves": [
+      {
+        "epreuveID": 1,
+        "type": "Examen",
+        "cours": "Base de données",
+        "semestre": "Semestre1",
+        "date": "2022-01-01",
+        "heure_debut": "08:00",
+        "duree": 2,
+        "salle": "Salle1",
+        "Surveillant": "Moussa Fall",
+        "coefficient": 3,
+        "statut": "En cours"
+      },
+      {
+        "epreuveID": 2,
+        "type": "Examen",
+        "cours": "Comptabilité générale",
+        "semestre": "Semestre1",
+        "date": "2022-01-01",
+        "heure_debut": "10:00",
+        "duree": 2,
+        "salle": "Salle2",
+        "Surveillant": "Fatima Lo",
+        "coefficient": 2,
+        "statut": "En cours"
+      },
+      {
+        "epreuveID": 3,
+        "type": "Examen",
+        "cours": "Topographie",
+        "semestre": "Semestre1",
+        "date": "2022-01-01",
+        "heure_debut": "14:00",
+        "duree": 2,
+        "salle": "Salle3",
+        "Surveillant": "Moussa Fall",
+        "coefficient": 2,
+        "statut": "En cours"
+      }
+    ],
+    "Notes":[
+        {
+            "noteID": 1,
+            "etudiant": "Matar Mbow",
+            "epreuve": "Base de données",
+            "note": 15,
+            "appreciations": "Très bien",
+            "dateCreation": "2022-01-01T00:00:00.000Z"
+        },
+        {
+            "noteID": 2,
+            "etudiant": "Rama Lo",
+            "epreuve": "Comptabilité générale",
+            "note": 12,
+            "appreciations": "Bien",
+            "dateCreation": "2022-01-01T00:00:00.000Z"
+        },
+        {
+            "noteID": 3,
+            "etudiant": "Jojo Baldé",
+            "epreuve": "Topographie",
+            "note": 10,
+            "appreciations": "Passable",
+            "dateCreation": "2022-01-01T00:00:00.000Z"
+        }
+    ],
+    "Paiements":[
+        {
+            "paiementID": 1,
+            "etudiant": "Matar Mbow",
+            "reference": "REF001",
+            "date": "2022-01-01",
+            "mois": "Janvier",
+            "montant": 50000,
+            "type": "Inscription",
+            "statut": "Payé"
+        },
+        {
+            "paiementID": 2,
+            "etudiant": "Rama Lo",
+            "reference": "REF002",
+            "date": "2022-01-01",
+            "mois": "Janvier",
+            "montant": 50000,
+            "type": "Inscription",
+            "statut": "Payé"
+        },
+        {
+            "paiementID": 3,
+            "etudiant": "Jojo Baldé",
+            "reference": "REF003",
+            "date": "2022-01-01",
+            "mois": "Janvier",
+            "montant": 50000,
+            "type": "Inscription",
+            "statut": "Payé"
+        }
+    ]
+  }
+}

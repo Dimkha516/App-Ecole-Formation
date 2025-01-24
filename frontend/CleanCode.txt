@@ -1,0 +1,19 @@
+1----------------------- COMPOSANT CHARGE DE LA RECUPERATION ET STOCKAGE DES DONNEES
+2----------------------- COMPOSANT CHARGE DE L'AFFICHAGE DES DONNNEES
+3----------------------- COMPOSANT CHARGE DE LA RECHERCHE ET DU FILTRE
+4----------------------- COMPOSANT CHARGE D'AJOUTER DES DONNNEES
+5----------------------- COMPOSANT CHARGE DE MODIFIER UNE DONNEES
+6----------------------- COMPOSANT CHARGE DE LA SUPPRESSION DE DONNNEES
+
+
+<div className="avatar">
+  <div className="mask mask-squircle h-12 w-12">
+    <img
+      src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+      alt="Avatar Tailwind CSS Component" />
+  </div>
+</div>
+
+-------- RECHERCHE et PAGINATION SUR LA PAGE LISTE DES UTILISATEURS SANS COMPTE => OKAY
+-------- CREATION DES AUTRES PAGES ET LEURS ROUTE DANS APP.JSX
+-------- UTILISATION DES ROUTES CREES DANS SIDEBAR
