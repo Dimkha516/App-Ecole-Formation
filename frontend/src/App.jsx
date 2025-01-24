@@ -11,6 +11,26 @@ import Surveillant_HomePage from "./Pages/Surveillant_HomePage";
 import Enseignant_HomePage from "./Enseignant_HomePage";
 import Etudiant_HomePage from "./Pages/Etudiant_HomePage";
 import ExistingUsersWithoutAccount from "./components/forms/ExistingUsersWithoutAccount";
+import DeletedUser from "./Pages/DeledUsers";
+import ListeFilieres from "./Data/ListeFilieres";
+import ListeSalles from "./Pages/ListeSalles";
+import ListeCours from "./Pages/ListeCours";
+import ListeEnseigants from "./Pages/ListeEnseignants";
+import ListeEtudiants from "./Pages/ListeEtudiants";
+import NotificationsRespoSect from "./Pages/NotifResSec";
+import ListeExamEval from "./Pages/ListeExamEval";
+import PlanningSurveillant from "./Pages/PlanningSurveillant";
+import NotifSurveillant from "./Pages/NotifSurveillant";
+import ListePaiements from "./Pages/ListePaiements";
+import RappelPaiements from "./Pages/RappelPaiements";
+import NotifCaissier from "./Pages/NotifCaissier";
+import PlanningEnseignant from "./Pages/PlanningEnseignant";
+import EnseignantGestionNotes from "./Pages/EnseignantGestionNotes";
+import NotifEnseignant from "./Pages/NotifEnseignant";
+import EnseignantClasses from "./Pages/EnseignantClasse";
+import PlanningEtudiant from "./Pages/PlanningEtudiant";
+import NotesEtudiant from "./Pages/NotesEtudiant";
+import NotifEtudiant from "./Pages/NotifEtudiant";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -56,6 +76,77 @@ function App() {
                       <Route
                         path="/existingUsersWithoutAccount"
                         element={<ExistingUsersWithoutAccount />}
+                      />
+                      <Route path="/deletdUsers" element={<DeletedUser />} />
+                      <Route
+                        path="/listeFilieres"
+                        element={<ListeFilieres />}
+                      />
+                      <Route path="/listeSalles" element={<ListeSalles />} />
+                      <Route path="/listeCours" element={<ListeCours />} />
+                      <Route
+                        path="/listeEnseignants"
+                        element={<ListeEnseigants />}
+                      />
+                      <Route
+                        path="/listeEtudiants"
+                        element={<ListeEtudiants />}
+                      />
+                      <Route
+                        path="/notificationsRespoSect"
+                        element={<NotificationsRespoSect />}
+                      />
+                      <Route
+                        path="/listeExamensEvaluations"
+                        element={<ListeExamEval />}
+                      />
+                      <Route
+                        path="/planningSurveillant"
+                        element={<PlanningSurveillant />}
+                      />
+                      <Route
+                        path="/notificationsSurveillant"
+                        element={<NotifSurveillant />}
+                      />
+                      <Route
+                        path="/listePaiements"
+                        element={<ListePaiements />}
+                      />
+                      <Route
+                        path="/rappelPaiements"
+                        element={<RappelPaiements />}
+                      />
+                      <Route
+                        path="/notificationsCaissier"
+                        element={<NotifCaissier />}
+                      />
+                      <Route
+                        path="/planningEnseignant"
+                        element={<PlanningEnseignant />}
+                      />
+                      <Route
+                        path="/enseignantGestionNotes"
+                        element={<EnseignantGestionNotes />}
+                      />
+                      <Route
+                        path="/notificationsEnseignant"
+                        element={<NotifEnseignant />}
+                      />
+                      <Route
+                        path="/enseignantClasses"
+                        element={<EnseignantClasses />}
+                      />
+                      <Route
+                        path="/planningEtudiant"
+                        element={<PlanningEtudiant />}
+                      />
+                      <Route
+                        path="/notesEtudiant"
+                        element={<NotesEtudiant />}
+                      />
+                      <Route
+                        path="/notificationsEtudiant"
+                        element={<NotifEtudiant />}
                       />
                     </Routes>
                   </main>
