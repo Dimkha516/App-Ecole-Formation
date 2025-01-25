@@ -30,6 +30,7 @@ const DataTable = ({
   onSearch,
   onFilter,
   renderActions,
+  functionToExecute
 }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedFilter, setSelectedFilter] = useState("");
@@ -63,7 +64,8 @@ const DataTable = ({
       return item.profil === selectedFilter;
     });
 
-  // Gestion de la pagination
+    
+      // Gestion de la pagination
   const paginatedData = filteredData.slice(
     page * rowsPerPage,
     page * rowsPerPage + rowsPerPage
@@ -113,7 +115,7 @@ const DataTable = ({
             </FormControl>
           )}
           <Tooltip title="Ajouter un utilisateur">
-            <IconButton color="primary">
+            <IconButton color="primary" onClick={functionToExecute}>
               <AddCircleIcon sx={{ fontSize: 40 }} />
             </IconButton>
           </Tooltip>
@@ -185,6 +187,7 @@ DataTable.propTypes = {
   onSearch: PropTypes.func,
   onFilter: PropTypes.func,
   renderActions: PropTypes.func,
+  functionToExecute: PropTypes.func.isRequired,
 };
 
 export default DataTable;

@@ -2,6 +2,7 @@
   "datas": {
     "Utilisateurs": [
       {
+        "id": 1,
         "userID": 1,
         "nom": "Baba",
         "prenom": "Diop",
@@ -13,6 +14,7 @@
         "dernierConnexion": "2022-01-01T00:00:00.000Z"
       },
       {
+        "id": "2",
         "userID": 2,
         "nom": "Khady",
         "prenom": "Sall",
@@ -23,6 +25,7 @@
         "dernierConnexion": "2022-01-01T00:00:00.000Z"
       },
       {
+        "id": "3",
         "userID": 3,
         "nom": "Moussa",
         "prenom": "Fall",
@@ -33,6 +36,7 @@
         "dernierConnexion": "2022-01-01T00:00:00.000Z"
       },
       {
+        "id": "4",
         "userID": 4,
         "nom": "Lamine",
         "prenom": "Gaye",
@@ -43,6 +47,7 @@
         "dernierConnexion": "2022-01-01T00:00:00.000Z"
       },
       {
+        "id": "5",
         "userID": 5,
         "nom": "Matar",
         "prenom": "Mbow",
@@ -53,6 +58,7 @@
         "dernierConnexion": "2022-01-01T00:00:00.000Z"
       },
       {
+        "id": "6",
         "userID": 6,
         "nom": "Fatima",
         "prenom": "Lo",
@@ -63,8 +69,47 @@
         "dernierConnexion": "2022-01-01T00:00:00.000Z"
       }
     ],
+    "Filieres": [
+      {
+        "id": 1,
+        "titre": "Comptabilité-Gestions",
+        "nombreInscrits": 85,
+        "domaine": "Gestion"
+      },
+      {
+        "id": 2,
+        "titre": "Marketing-Communication",
+        "nombreInscrits": 55,
+        "domaine": "Communication"
+      },
+      {
+        "id": 3,
+        "titre": "Développement web mobile",
+        "nombreInscrits": 79,
+        "domaine": "Informatique"
+      },
+      {
+        "id": 4,
+        "titre": "Cybersecurité",
+        "nombreInscrits": 40,
+        "domaine": "Informatique"
+      },
+      {
+        "id": 5,
+        "titre": "Génie-civil",
+        "nombreInscrits": 90,
+        "domaine": "BTP"
+      },
+      {
+        "id": 6,
+        "titre": "Informatique Industrielle",
+        "nombreInscrits": 35,
+        "domaine": "Industrie"
+      }
+    ],
     "Enseignants": [
       {
+        "id": "1",
         "enseignantID": 1,
         "profil": "enseignant",
         "userID": 1,
@@ -78,6 +123,7 @@
         "tauxHoraire": 5000
       },
       {
+        "id": "2",
         "enseignantID": 2,
         "profil": "enseignant",
         "userID": 2,
@@ -91,6 +137,7 @@
         "tauxHoraire": 4500
       },
       {
+        "id": "3",
         "enseignantID": 3,
         "profil": "enseignant",
         "userID": 3,
@@ -106,6 +153,7 @@
     ],
     "Etudiants": [
       {
+        "id": "1",
         "etudiantID": 1,
         "profil": "étudiant",
         "userID": 4,
@@ -130,6 +178,7 @@
         "statut": "ACTIF"
       },
       {
+        "id": "2",
         "etudiantID": 2,
         "profil": "étudiant",
         "userID": 5,
@@ -154,6 +203,7 @@
         "statut": "ACTIF"
       },
       {
+        "id": "3",
         "etudiantID": 6,
         "profil": "étudiant",
         "userID": 6,
@@ -180,6 +230,7 @@
     ],
     "Suveillants": [
       {
+        "id": "1",
         "surveillantID": 1,
         "userID": 7,
         "matricule": "SUR001",
@@ -188,6 +239,7 @@
         "telephone": "77 123 45 67"
       },
       {
+        "id": "2",
         "surveillantID": 2,
         "userID": 8,
         "matricule": "SUR002",
@@ -199,6 +251,7 @@
 
     "Caissiers": [
       {
+        "id": "1",
         "caissierID": 1,
         "userID": 9,
         "matricule": "CAI001",
@@ -207,6 +260,7 @@
         "telephone": "77 123 45 67"
       },
       {
+        "id": "2",
         "caissierID": 2,
         "userID": 10,
         "matricule": "CAI002",
@@ -218,6 +272,7 @@
 
     "ResponsablesPedago": [
       {
+        "id": "1",
         "responsableID": 1,
         "userID": 11,
         "matricule": "RESP001",
@@ -226,6 +281,7 @@
         "telephone": "77 123 45 67"
       },
       {
+        "id": "2",
         "responsableID": 2,
         "userID": 12,
         "matricule": "RESP002",
@@ -236,6 +292,7 @@
     ],
     "Programmes": [
       {
+        "id": "1",
         "programmeID": 1,
         "filiere": "Informatique",
         "cours": "Base de données",
@@ -245,6 +302,7 @@
         "coefficient": 3
       },
       {
+        "id": "2",
         "programmeID": 2,
         "filiere": "Comptabilité",
         "cours": "Comptabilité générale",
@@ -254,6 +312,7 @@
         "coefficient": 2
       },
       {
+        "id": "3",
         "programmeID": 3,
         "filiere": "Génie-civil",
         "cours": "Topographie",
@@ -265,6 +324,7 @@
     ],
     "Salles": [
       {
+        "id": "1",
         "salleID": 1,
         "code": "Salle1",
         "localisation": "Bâtiment A",
@@ -272,6 +332,7 @@
         "capacite": 50
       },
       {
+        "id": "2",
         "salleID": 2,
         "code": "Salle2",
         "localisation": "Bâtiment B",
@@ -279,6 +340,7 @@
         "capacite": 30
       },
       {
+        "id": "3",
         "salleID": 3,
         "code": "Salle3",
         "localisation": "Bâtiment C",
@@ -288,6 +350,7 @@
     ],
     "SessionCours": [
       {
+        "id": "1",
         "sessionID": 1,
         "cours": "Base de données",
         "enseignant": "Papa Kairé",
@@ -299,6 +362,7 @@
         "statut": "En cours"
       },
       {
+        "id": "2",
         "sessionID": 2,
         "cours": "Comptabilité générale",
         "enseignant": "Mamadou Diop",
@@ -310,6 +374,7 @@
         "statut": "En cours"
       },
       {
+        "id": "3",
         "sessionID": 3,
         "cours": "Topographie",
         "enseignant": "Mamadou Diop",
@@ -323,6 +388,7 @@
     ],
     "Absences": [
       {
+        "id": "1",
         "absenceID": 1,
         "sessionCours": "Base de données",
         "etudiant": "Matar Mbow",
@@ -331,6 +397,7 @@
         "commentaire": "Maladie"
       },
       {
+        "id": "2",
         "absenceID": 2,
         "sessionCours": "Comptabilité générale",
         "etudiant": "Rama Lo",
@@ -339,6 +406,7 @@
         "commentaire": "Absence non justifiée"
       },
       {
+        "id": "3",
         "absenceID": 3,
         "sessionCours": "Topographie",
         "etudiant": "Jojo Baldé",
@@ -350,6 +418,7 @@
 
     "Epreuves": [
       {
+        "id": "1",
         "epreuveID": 1,
         "type": "Examen",
         "cours": "Base de données",
@@ -363,6 +432,7 @@
         "statut": "En cours"
       },
       {
+        "id": "2",
         "epreuveID": 2,
         "type": "Examen",
         "cours": "Comptabilité générale",
@@ -376,6 +446,7 @@
         "statut": "En cours"
       },
       {
+        "id": "3",
         "epreuveID": 3,
         "type": "Examen",
         "cours": "Topographie",
@@ -389,63 +460,69 @@
         "statut": "En cours"
       }
     ],
-    "Notes":[
-        {
-            "noteID": 1,
-            "etudiant": "Matar Mbow",
-            "epreuve": "Base de données",
-            "note": 15,
-            "appreciations": "Très bien",
-            "dateCreation": "2022-01-01T00:00:00.000Z"
-        },
-        {
-            "noteID": 2,
-            "etudiant": "Rama Lo",
-            "epreuve": "Comptabilité générale",
-            "note": 12,
-            "appreciations": "Bien",
-            "dateCreation": "2022-01-01T00:00:00.000Z"
-        },
-        {
-            "noteID": 3,
-            "etudiant": "Jojo Baldé",
-            "epreuve": "Topographie",
-            "note": 10,
-            "appreciations": "Passable",
-            "dateCreation": "2022-01-01T00:00:00.000Z"
-        }
+    "Notes": [
+      {
+        "id": "1",
+        "noteID": 1,
+        "etudiant": "Matar Mbow",
+        "epreuve": "Base de données",
+        "note": 15,
+        "appreciations": "Très bien",
+        "dateCreation": "2022-01-01T00:00:00.000Z"
+      },
+      {
+        "id": "2",
+        "noteID": 2,
+        "etudiant": "Rama Lo",
+        "epreuve": "Comptabilité générale",
+        "note": 12,
+        "appreciations": "Bien",
+        "dateCreation": "2022-01-01T00:00:00.000Z"
+      },
+      {
+        "id": "3",
+        "noteID": 3,
+        "etudiant": "Jojo Baldé",
+        "epreuve": "Topographie",
+        "note": 10,
+        "appreciations": "Passable",
+        "dateCreation": "2022-01-01T00:00:00.000Z"
+      }
     ],
-    "Paiements":[
-        {
-            "paiementID": 1,
-            "etudiant": "Matar Mbow",
-            "reference": "REF001",
-            "date": "2022-01-01",
-            "mois": "Janvier",
-            "montant": 50000,
-            "type": "Inscription",
-            "statut": "Payé"
-        },
-        {
-            "paiementID": 2,
-            "etudiant": "Rama Lo",
-            "reference": "REF002",
-            "date": "2022-01-01",
-            "mois": "Janvier",
-            "montant": 50000,
-            "type": "Inscription",
-            "statut": "Payé"
-        },
-        {
-            "paiementID": 3,
-            "etudiant": "Jojo Baldé",
-            "reference": "REF003",
-            "date": "2022-01-01",
-            "mois": "Janvier",
-            "montant": 50000,
-            "type": "Inscription",
-            "statut": "Payé"
-        }
+    "Paiements": [
+      {
+        "id": "1",
+        "paiementID": 1,
+        "etudiant": "Matar Mbow",
+        "reference": "REF001",
+        "date": "2022-01-01",
+        "mois": "Janvier",
+        "montant": 50000,
+        "type": "Inscription",
+        "statut": "Payé"
+      },
+      {
+        "id": "2",
+        "paiementID": 2,
+        "etudiant": "Rama Lo",
+        "reference": "REF002",
+        "date": "2022-01-01",
+        "mois": "Janvier",
+        "montant": 50000,
+        "type": "Inscription",
+        "statut": "Payé"
+      },
+      {
+        "id": "3",
+        "paiementID": 3,
+        "etudiant": "Jojo Baldé",
+        "reference": "REF003",
+        "date": "2022-01-01",
+        "mois": "Janvier",
+        "montant": 50000,
+        "type": "Inscription",
+        "statut": "Payé"
+      }
     ]
   }
 }

@@ -15,12 +15,12 @@ module.exports = {
   daisyui: {
     themes: [
       "light",
-      "dark",
-      "synthwave",
-      "corporate",
-      "bumblebee", 
-      "cupcake",
-      "emerald",
+      // "dark",
+      // "synthwave",
+      // "corporate",
+      // "bumblebee", 
+      // "cupcake",
+      // "emerald",
     ], // Choisissez vos thèmes préférés
   //  darkTheme: "dark", // Thème par défaut en mode sombre
   },
