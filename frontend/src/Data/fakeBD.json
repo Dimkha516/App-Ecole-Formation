@@ -74,37 +74,43 @@
         "id": 1,
         "titre": "Comptabilité-Gestions",
         "nombreInscrits": 85,
-        "domaine": "Gestion"
+        "domaine": "Gestion",
+        "niveauAcademique": "CAP, BT, BTS"
       },
       {
         "id": 2,
         "titre": "Marketing-Communication",
         "nombreInscrits": 55,
-        "domaine": "Communication"
+        "domaine": "Communication",
+        "niveauAcademique": "BTS, Licence3, Master"
       },
       {
         "id": 3,
         "titre": "Développement web mobile",
         "nombreInscrits": 79,
-        "domaine": "Informatique"
+        "domaine": "Informatique",
+        "niveauAcademique": "BTS, Licence3, Master"
       },
       {
         "id": 4,
         "titre": "Cybersecurité",
         "nombreInscrits": 40,
-        "domaine": "Informatique"
+        "domaine": "Informatique",
+        "niveauAcademique": "BTS, Licence3, Master"
       },
       {
         "id": 5,
         "titre": "Génie-civil",
         "nombreInscrits": 90,
-        "domaine": "BTP"
+        "domaine": "BTP",
+        "niveauAcademique": "CAP, BT, BTS"
       },
       {
         "id": 6,
         "titre": "Informatique Industrielle",
         "nombreInscrits": 35,
-        "domaine": "Industrie"
+        "domaine": "Industrie",
+        "niveauAcademique": "BTS, Licence3, Master"
       }
     ],
     "Enseignants": [

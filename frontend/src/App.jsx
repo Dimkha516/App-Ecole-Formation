@@ -12,7 +12,7 @@ import Enseignant_HomePage from "./Enseignant_HomePage";
 import Etudiant_HomePage from "./Pages/Etudiant_HomePage";
 import ExistingUsersWithoutAccount from "./components/forms/ExistingUsersWithoutAccount";
 import DeletedUser from "./Pages/DeledUsers";
-import ListeFilieres from "./Data/ListeFilieres";
+import ListeFilieres from "./Pages/ListeFilieres";
 import ListeSalles from "./Pages/ListeSalles";
 import ListeCours from "./Pages/ListeCours";
 import ListeEnseigants from "./Pages/ListeEnseignants";
@@ -31,6 +31,7 @@ import EnseignantClasses from "./Pages/EnseignantClasse";
 import PlanningEtudiant from "./Pages/PlanningEtudiant";
 import NotesEtudiant from "./Pages/NotesEtudiant";
 import NotifEtudiant from "./Pages/NotifEtudiant";
+import ListePresences from "./Pages/Presences";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -91,6 +92,10 @@ function App() {
                       <Route
                         path="/listeEtudiants"
                         element={<ListeEtudiants />}
+                      />
+                      <Route
+                        path="/listePresences"
+                        element={<ListePresences />}
                       />
                       <Route
                         path="/notificationsRespoSect"

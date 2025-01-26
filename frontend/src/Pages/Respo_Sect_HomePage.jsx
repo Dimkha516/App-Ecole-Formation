@@ -47,13 +47,13 @@ function Respo_Sect_HomePage() {
         { label: "Nombre de filières", value: 12 },
         { label: "Filière la plus demandée", value: "Informatique" },
       ],
-      link: "/filieres",
+      link: "/listeFilieres",
       icon: AcademicCapIcon,
     },
     {
       title: "Gestion Cours",
       attributes: [{ label: "Total cours", value: 18 }],
-      link: "/etudiants",
+      link: "/listeCours",
       icon: BookOpenIcon,
     },
     {
@@ -63,7 +63,7 @@ function Respo_Sect_HomePage() {
         { label: "Garçons", value: 163 },
         { label: "Filles", value: 162 },
       ],
-      link: "/etudiants",
+      link: "/listeEtudiants",
       icon: UserGroupIcon,
     },
     {
@@ -73,13 +73,13 @@ function Respo_Sect_HomePage() {
         { label: "Hommes", value: 20 },
         { label: "Femmes", value: 12 },
       ],
-      link: "/etudiants",
+      link: "/listeEnseignants",
       icon: UserGroupIcon,
     },
     {
       title: "Gestion Présences",
       attributes: [{ label: "Taux d'absences", value: 18 }],
-      link: "/etudiants",
+      link: "/listePresences",
       icon: CalendarDaysIcon,
     },
 
@@ -90,14 +90,14 @@ function Respo_Sect_HomePage() {
         { label: "Programmés", value: 11 },
         { label: "Annulés", value: 5 },
       ],
-      link: "/etudiants",
+      link: "/listeExamensEvaluations",
       icon: DocumentTextIcon,
     },
 
     {
       title: "Gestion Notifications",
       attributes: [{ label: "Envoyées", value: 70 }],
-      link: "/etudiants",
+      link: "/notificationsRespoSect",
       icon: BellIcon,
     },
     {
@@ -106,7 +106,7 @@ function Respo_Sect_HomePage() {
         { label: "Notes saisies ce mois", value: 150 },
         { label: "Moyenne générale", value: "14.5" },
       ],
-      link: "/notes",
+      link: "/login",
       icon: ClipboardDocumentListIcon,
     },
     {
@@ -116,7 +116,7 @@ function Respo_Sect_HomePage() {
         { label: "Disponibles", value: "3" },
         { label: "Occupées", value: "10" },
       ],
-      link: "/notes",
+      link: "/listeSalles",
       icon: BuildingOfficeIcon,
     },
   ];

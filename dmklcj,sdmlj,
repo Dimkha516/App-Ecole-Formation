@@ -1,0 +1,53 @@
+[33mcommit 137bec4b15563fa4d18e5b577a3364a2863cfb9a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: bamba <dimkha516@gmail.com>
+Date:   Sat Jan 25 21:18:58 2025 +0000
+
+    design homePagesAdminRespoSect
+
+[33mcommit 54fa51b1bf92571dbb776a099fc0e9309f7f782e[m
+Author: bamba <dimkha516@gmail.com>
+Date:   Fri Jan 24 22:22:28 2025 +0000
+
+    routes creation
+
+[33mcommit a210a838dcbfbbd1e90b3ca01658241edf80ecec[m
+Author: bamba <dimkha516@gmail.com>
+Date:   Fri Jan 24 20:39:54 2025 +0000
+
+    V1DesignInterfaceAdmin
+
+[33mcommit d5579b65ded18f180adbcced4c94f478ff00844d[m
+Author: bamba <dimkha516@gmail.com>
+Date:   Sun Jan 19 18:23:59 2025 +0000
+
+    conception update
+
+[33mcommit aa36df560408bb5987c454bd6d70d1f4492b57b9[m
+Author: bamba <dimkha516@gmail.com>
+Date:   Sat Jan 18 18:32:45 2025 +0000
+
+    conception update
+
+[33mcommit 053bea79cfa4c254201b577650f5e9b3dc7ebdbe[m
+Author: bamba <dimkha516@gmail.com>
+Date:   Sat Jan 18 18:31:17 2025 +0000
+
+    tablesStructure
+
+[33mcommit fb9807ec6fd99ed600f0d46ac92c08ca391fffc4[m
+Author: bamba <dimkha516@gmail.com>
+Date:   Fri Jan 17 23:08:07 2025 +0000
+
+    uml1
+
+[33mcommit 17087e170177a89fb68ca8cd1f5f6511833235df[m
+Author: Bamba <dimkha516@gmail.com>
+Date:   Fri Jan 17 18:35:44 2025 +0000
+
+    main
+
+[33mcommit 7f005847654dff5f500153165770974c1b5c5de6[m
+Author: Bamba <dimkha516@gmail.com>
+Date:   Fri Jan 17 18:34:49 2025 +0000
+
+    Initial commit

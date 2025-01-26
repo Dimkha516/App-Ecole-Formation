@@ -114,7 +114,7 @@ const DataTable = ({
               </Select>
             </FormControl>
           )}
-          <Tooltip title="Ajouter un utilisateur">
+          <Tooltip title="AJOUTER">
             <IconButton color="primary" onClick={functionToExecute}>
               <AddCircleIcon sx={{ fontSize: 40 }} />
             </IconButton>
@@ -141,7 +141,7 @@ const DataTable = ({
           </TableHead>
           <TableBody>
             {paginatedData.map((row) => (
-              <TableRow key={row.userID}>
+              <TableRow key={row.id}>
                 {columns.map((column) => (
                   <TableCell key={column.field}>{row[column.field]}</TableCell>
                 ))}
