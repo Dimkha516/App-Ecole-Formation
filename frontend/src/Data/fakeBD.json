@@ -355,9 +355,11 @@
       }
     ],
     "SessionCours": [
-      {
+      { 
         "id": "1",
         "sessionID": 1,
+        "filiere": "Informatique",
+        "niveau": "BTS",
         "cours": "Base de données",
         "enseignant": "Papa Kairé",
         "salle": "Salle1",
@@ -370,6 +372,8 @@
       {
         "id": "2",
         "sessionID": 2,
+        "filiere": "Comptabilité-Gestion",
+        "niveau": "Licence3",
         "cours": "Comptabilité générale",
         "enseignant": "Mamadou Diop",
         "salle": "Salle2",
@@ -382,10 +386,55 @@
       {
         "id": "3",
         "sessionID": 3,
+        "filiere": "Génie-civil",
+        "niveau": "CAP",
         "cours": "Topographie",
         "enseignant": "Mamadou Diop",
         "salle": "Salle3",
         "jour": "Mercredi",
+        "heure_debut": "14:00",
+        "heure_fin": "16:00",
+        "nombreMaxEtudiants": 40,
+        "statut": "En cours"
+      },
+      {
+
+        "id": "4",
+        "sessionID": 4,
+        "filiere": "Informatique",
+        "niveau": "BTS",
+        "cours": "Base de données",
+        "enseignant": "Papa Kairé",
+        "salle": "Salle1",
+        "jour": "Jeudi",
+        "heure_debut": "16:00",
+        "heure_fin": "18:00",
+        "nombreMaxEtudiants": 50,
+        "statut": "En cours"
+      },
+      {
+        "id": "5",
+        "sessionID": 5,
+        "filiere": "Comptabilité-Gestion",
+        "niveau": "Licence3",
+        "cours": "Comptabilité générale",
+        "enseignant": "Mamadou Diop",
+        "salle": "Salle2",
+        "jour": "Vendredi",
+        "heure_debut": "10:00",
+        "heure_fin": "12:00",
+        "nombreMaxEtudiants": 30,
+        "statut": "En cours"
+      },
+      {
+        "id": "6",
+        "sessionID": 6,
+        "filiere": "Génie-civil",
+        "niveau": "CAP",
+        "cours": "Topographie",
+        "enseignant": "Mamadou Diop",
+        "salle": "Salle3",
+        "jour": "Vendredi",
         "heure_debut": "14:00",
         "heure_fin": "16:00",
         "nombreMaxEtudiants": 40,

@@ -26,6 +26,7 @@ const Sidebar = ({ open, toggleSidebar }) => {
       label: "Responsable Pédagogique",
       icon: <SchoolIcon />,
       options: [
+        {label: "Tableau de bord", path: "/RespoSectHome"},
         { label: "Gestion Filières", path: "/listeFilieres" },
         { label: "Gestion Salles", path: "/listeSalles" },
         { label: "Gestion Cours", path: "/listeCours" },
@@ -39,6 +40,7 @@ const Sidebar = ({ open, toggleSidebar }) => {
       label: "Secrétaire",
       icon: <AssignmentIcon />,
       options: [
+        {label: "Tableau de bord", path: "/RespoSectHome"},
         { label: "Gestion Filières", path: "/listeFilieres" },
         { label: "Gestion Salles", path: "/listeSalles" },
         { label: "Gestion Cours", path: "/listeCours" },
