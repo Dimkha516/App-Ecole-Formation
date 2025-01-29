@@ -88,12 +88,10 @@ const UsersList = () => {
           { field: "profil", headerName: "Profil" },
         ]}
         searchKeys={["nom", "prenom", "email"]}
+        filterKey="profil" // Clé dynamique pour le filtrage
         filterOptions={[
           { value: "Admin", label: "Admin" },
-          {
-            value: "Responsable Pédagogique",
-            label: "Responsable Pédagogique",
-          },
+          {value: "Responsable Pédagogique",label: "Responsable Pédagogique"},
           { value: "Surveillant", label: "Surveillant" },
           { value: "Enseignant", label: "Enseignant" },
           { value: "Étudiant", label: "Étudiant" },

@@ -8,6 +8,7 @@ import DataTable from "../DataTable";
 import AddFiliere from "../forms/AddFiliere";
 
 const FilieresListe = () => {
+
   useEffect(() => {
     fetchFilieres();
   }, []);
@@ -81,9 +82,17 @@ const FilieresListe = () => {
         { field: "nombreInscrits", headerName: "Total Inscrits" },
       ]}
       searchKeys={["titre", "domaine", "niveauAcademique"]}
-    //   filterOptions={[
-    //     { value: "domaine", label: "Informatique",},
-    //   ]}
+      
+      
+    
+      filterKey="domaine"
+      filterOptions={[
+        { value: "Informatique", label: "Informatique"},
+        { value: "Gestion", label: "Gestion"},
+        { value: "Communication", label: "Communication"},
+        { value: "BTP", label: "BTP"},
+        { value: "Industrie", label: "Industrie"}
+      ]}
       renderActions={renderActions}
       functionToExecute={handleOpenModal}
     />

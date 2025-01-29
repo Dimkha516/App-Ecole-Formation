@@ -30,7 +30,10 @@ const DataTable = ({
   onSearch,
   onFilter,
   renderActions,
-  functionToExecute
+  functionToExecute,
+  // eslint-disable-next-line react/prop-types
+  filterKey,
+  // eslint-disable-next-line react/prop-types
 }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedFilter, setSelectedFilter] = useState("");
@@ -52,20 +55,31 @@ const DataTable = ({
   };
 
   // Application de la recherche et du filtre
+  // const filteredData = data
+  //   .filter((item) => {
+  //     if (!searchQuery) return true; // Si aucune recherche, inclure tout
+  //     return searchKeys.some((key) =>
+  //       item[key].toLowerCase().includes(searchQuery.toLowerCase())
+  //     );
+  //   })
+  //   .filter((item) => {
+  //     if (!selectedFilter) return true; // Si aucun filtre, inclure tout
+  //     return item.profil === selectedFilter;
+  //   });
   const filteredData = data
-    .filter((item) => {
-      if (!searchQuery) return true; // Si aucune recherche, inclure tout
-      return searchKeys.some((key) =>
-        item[key].toLowerCase().includes(searchQuery.toLowerCase())
-      );
-    })
-    .filter((item) => {
-      if (!selectedFilter) return true; // Si aucun filtre, inclure tout
-      return item.profil === selectedFilter;
-    });
+  .filter((item) => {
+    if (!searchQuery) return true; // Si aucune recherche, inclure tout
+    return searchKeys.some((key) =>
+      item[key]?.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  })
+  
+  .filter((item) => {
+    if (!selectedFilter || !filterKey) return true; // Si aucun filtre ou filterKey, inclure tout
+    return item[filterKey]?.toString() === selectedFilter;
+  });
 
-    
-      // Gestion de la pagination
+  // Gestion de la pagination
   const paginatedData = filteredData.slice(
     page * rowsPerPage,
     page * rowsPerPage + rowsPerPage
@@ -98,7 +112,7 @@ const DataTable = ({
           {/* Filtrage */}
           {filterOptions && (
             <FormControl variant="outlined" size="small" sx={{ width: 200 }}>
-              <InputLabel id="filter-label">Filtrer par profil</InputLabel>
+              <InputLabel id="filter-label">Filtrer</InputLabel>
               <Select
                 labelId="filter-label"
                 label="Filtrer par profil"
@@ -143,12 +157,28 @@ const DataTable = ({
             {paginatedData.map((row) => (
               <TableRow key={row.id}>
                 {columns.map((column) => (
-                  <TableCell key={column.field}>{row[column.field]}</TableCell>
+                  <TableCell key={column.field}>
+                    {/* Vérifiez si la colonne a un renderCell */}
+                    {column.renderCell
+                      ? column.renderCell(row)
+                      : row[column.field]}
+                  </TableCell>
                 ))}
                 {renderActions && <TableCell>{renderActions(row)}</TableCell>}
               </TableRow>
             ))}
           </TableBody>
+
+          {/* <TableBody>
+            {paginatedData.map((row) => (
+              <TableRow key={row.id}>
+                {columns.map((column) => (
+                  <TableCell key={column.field}>{row[column.field]}</TableCell>
+                ))}
+                {renderActions && <TableCell>{renderActions(row)}</TableCell>}
+              </TableRow>
+            ))}
+          </TableBody> */}
         </Table>
       </TableContainer>
 
