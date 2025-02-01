@@ -33,7 +33,7 @@ const DataTable = ({
   functionToExecute,
   // eslint-disable-next-line react/prop-types
   filterKey,
-  // eslint-disable-next-line react/prop-types
+  //eslint-disable-next-line react/prop-types
 }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedFilter, setSelectedFilter] = useState("");

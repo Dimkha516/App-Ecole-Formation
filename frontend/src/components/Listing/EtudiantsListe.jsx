@@ -4,6 +4,7 @@ import { IconButton, Tooltip } from "@mui/material";
 import { DeleteIcon, EditIcon, InfoIcon } from "lucide-react";
 import DataTable from "../DataTable";
 import AddStudent from "../forms/AddStudent";
+import ShowStudentDetails from "../Popus/Details/ShowEtudiantDetails";
 
 const EtudiantsListe = () => {
   useEffect(() => {
@@ -29,8 +30,13 @@ const EtudiantsListe = () => {
     alert(`Supprimer Etudiant avec l'ID ${id}`);
   };
 
-  const handleViewStudentDetails = (id) => {
-    alert(`Afficher les détails de l'étudiant avec l'ID ${id}`);
+
+  // BLOC SHOW SUDENT DETAILS
+  const [showStudentDetails, setShowStudentDetails] = useState(false);
+  const [selectedStudent, setSelectedStudent] = useState(null);
+  const handleViewStudentDetails = (etudiant) => {
+    setSelectedStudent(etudiant);
+    setShowStudentDetails(true);
   };
 
   const addStudentRef = useRef(null);
@@ -46,7 +52,7 @@ const EtudiantsListe = () => {
       <Tooltip title="Voir détails">
         <IconButton
           color="info"
-          onClick={() => handleViewStudentDetails(etudiant.id)}
+          onClick={() => handleViewStudentDetails(etudiant)}
         >
           <InfoIcon />
         </IconButton>
@@ -94,8 +100,8 @@ const EtudiantsListe = () => {
           { field: "prenom", headerName: "Prénom" },
           { field: "filiere", headerName: "Filière" },
           { field: "niveauAcademique", headerName: "Niveau" },
-          { field: "telephone", headerName: "Tél" },
-          { field: "email", headerName: "Email" },
+          // { field: "telephone", headerName: "Tél" },
+          // { field: "email", headerName: "Email" },
         ]}
         searchKeys={["matricule", "nom", "prenom", "telephone", "filiere"]}
         filterKey="filiere"
@@ -108,6 +114,10 @@ const EtudiantsListe = () => {
         renderActions={renderActions}
         functionToExecute={handleOpenModal}
       />
+      <ShowStudentDetails
+      isOpen={showStudentDetails}
+      onClose={() => setShowStudentDetails(false)}
+      selectedStudent={selectedStudent}/>
     </>
   );
 };

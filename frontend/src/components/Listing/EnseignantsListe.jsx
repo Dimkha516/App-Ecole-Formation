@@ -6,6 +6,7 @@ import { IconButton, Tooltip } from "@mui/material";
 import { DeleteIcon, EditIcon, InfoIcon } from "lucide-react";
 import AddEnseignant from "../forms/AddEnseignant";
 import DataTable from "../DataTable";
+import ShowTeachersDetails from "../Popus/Details/ShowTeachersDetails";
 
 const EnseignantsListe = () => {
   useEffect(() => {
@@ -22,16 +23,22 @@ const EnseignantsListe = () => {
     }
   };
 
+  // BLOC MODIFICATION ENSEIGNANT
   const handleEditEnseignant = (id) => {
     alert(`Modifier Enseignant avec l'ID ${id}`);
   };
 
+  // BLOC SUPPRESSION ENSEIGNANT
   const handleDeleteEnseignant = (id) => {
     alert(`Supprimer Enseignant avec l'ID ${id}`);
   };
 
-  const handleViewEnseignantDetails = (id) => {
-    alert(`Afficher les détails de l'Enseignant avec l'ID ${id}`);
+  // BLOC SHOW TEACHER DEATAILS
+  const [showTeacherDetails, setShowTeacherDetails] = useState(false);
+  const [selectedTeacher, setSelectedTeacher] = useState(null);
+  const handleViewEnseignantDetails = (enseignant) => {
+    setSelectedTeacher(enseignant);
+    setShowTeacherDetails(true);
   };
 
   const addEnseignantRef = useRef(null);
@@ -47,7 +54,7 @@ const EnseignantsListe = () => {
       <Tooltip title="Voir détails">
         <IconButton
           color="info"
-          onClick={() => handleViewEnseignantDetails(enseignant.id)}
+          onClick={() => handleViewEnseignantDetails(enseignant)}
         >
           <InfoIcon />
         </IconButton>
@@ -98,6 +105,10 @@ const EnseignantsListe = () => {
         renderActions={renderActions}
         functionToExecute={handleOpenModal}
       />
+      <ShowTeachersDetails
+      isOpen={showTeacherDetails}
+      onClose={() => setShowTeacherDetails(false)}
+      selectedTeacher={selectedTeacher}/>
     </>
   );
 };
