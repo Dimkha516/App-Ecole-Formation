@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Card,
   CardContent,
@@ -19,67 +19,38 @@ import {
 } from "@mui/material";
 import { Visibility as VisibilityIcon } from "@mui/icons-material";
 import PresencesListe from "../components/Listing/PresencesListe";
+import DataHandler from "../Data/DataHandler";
 
 const ListePresences = () => {
+  useEffect(() => {
+    getAllSessions();
+  }, []);
+
+  const getAllSessions = async () => {
+    try {
+      const response = await DataHandler.getDatas("");
+      setAllSessions(response.PresencesAbsences);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  const [allSessions, setAllSessions] = useState([]);
   const [selectedLevel, setSelectedLevel] = useState("all");
   const [selectedProgram, setSelectedProgram] = useState("all");
   const [selectedSession, setSelectedSession] = useState(null);
 
-  // Données exemple
-  const sessions = [
-    {
-      id: 1,
-      date: "2025-02-01",
-      time: "08:00",
-      program: "Informatique",
-      level: "BTS",
-      students: [
-        { id: 1, name: "Jean Dupont", present: true },
-        { id: 2, name: "Marie Martin", present: false, justified: true },
-        { id: 3, name: "Paul Bernard", present: true },
-      ],
-    },
-    {
-      id: 2,
-      date: "2025-02-01",
-      time: "10:00",
-      program: "Gestion",
-      level: "Licence",
-      students: [
-        { id: 4, name: "Sophie Dubois", present: true },
-        { id: 5, name: "Lucas Petit", present: true },
-        { id: 6, name: "Emma Leroy", present: false, justified: false },
-      ],
-    },
-  ];
-
   // Filtrer les sessions
-//   const filteredSessions = sessions.filter((session) => {
-//     if (selectedLevel !== "all" && session.level !== selectedLevel)
-//       return false;
-//     if (selectedProgram !== "all" && session.program !== selectedProgram)
-//       return false;
-//     return true;
-//   });
-
-  // Calculer les statistiques
-//   const getSessionStats = (session) => {
-//     const total = session.students.length;
-//     const present = session.students.filter((s) => s.present).length;
-//     const percentagePresent = ((present / total) * 100).toFixed(1);
-//     return { total, present, percentagePresent };
-//   };
- // Filtrer les sessions
- const filteredSessions = sessions.filter(session => {
-    if (selectedLevel !== 'all' && session.level !== selectedLevel) return false;
-    if (selectedProgram !== 'all' && session.program !== selectedProgram) return false;
-    return true;
+  // const filteredSessions = sessions.filter((session) => {
+  const filteredSessions = allSessions.filter((session) => {
+    if (selectedLevel !== "all" && session.level !== selectedLevel)
+      return false;
+    return !(selectedProgram !== "all" && session.program !== selectedProgram);
   });
 
   // Calculer les statistiques
   const getSessionStats = (session) => {
     const total = session.students.length;
-    const present = session.students.filter(s => s.present).length;
+    const present = session.students.filter((s) => s.present).length;
     const percentagePresent = ((present / total) * 100).toFixed(1);
     return { total, present, percentagePresent };
   };

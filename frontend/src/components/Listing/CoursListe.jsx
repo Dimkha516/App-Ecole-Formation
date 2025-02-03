@@ -11,7 +11,7 @@ import {
   Room as RoomIcon,
   Person as PersonIcon,
 } from "@mui/icons-material";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const CoursListe = ({ course, onClose }) => {
   if (!course) return null;
