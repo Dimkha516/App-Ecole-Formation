@@ -3,7 +3,6 @@
     "Utilisateurs": [
       {
         "id": 1,
-        "userID": 1,
         "nom": "Baba",
         "prenom": "Diop",
         "email": "baba@example.com",
@@ -74,7 +73,7 @@
         "id": 1,
         "titre": "Comptabilité-Gestions",
         "nombreInscrits": 85,
-        "domaine": "Gestion",
+        "domaine": "Gestion", 
         "niveauAcademique": "CAP, BT, BTS"
       },
       {
@@ -356,6 +355,55 @@
         "telephone": "77 123 45 67"
       }
     ],
+    "PaiementsEtudiants": [
+      {
+        "id": 1,
+        "firstName": "Jean",
+        "lastName": "Dupont",
+        "program": "Informatique",
+        "level": "BTS",
+        "lastPaymentDate": "2025-01-15",
+        "totalFees": 850000,
+        "totalPaid": 600000,
+        "status": "En règle",
+        "payments": [
+          {
+            "id": 1,
+            "date": "2024-09-15",
+            "amount": 300000,
+            "method": "Virement",
+            "reference": "VIR-2024-001"
+          },
+          {
+            "id": 2,
+            "date": "2025-01-15",
+            "amount": 300000,
+            "method": "Espèces",
+            "reference": "ESP-2025-001"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "firstName": "Marie",
+        "lastName": "Martin",
+        "program": "Gestion",
+        "level": "Licence",
+        "lastPaymentDate": "2024-12-20",
+        "totalFees": 950000,
+        "totalPaid": 450000,
+        "status": "En retard",
+        "payments": [
+          {
+            "id": 3,
+            "date": "2024-09-10",
+            "amount": 450000,
+            "method": "Chèque",
+            "reference": "CHQ-2024-001"
+          }
+        ]
+      }
+    ],
     "Programmes": [
       {
         "id": "1",
@@ -597,41 +645,6 @@
         "note": 10,
         "appreciations": "Passable",
         "dateCreation": "2022-01-01T00:00:00.000Z"
-      }
-    ],
-    "Paiements": [
-      {
-        "id": "1",
-        "paiementID": 1,
-        "etudiant": "Matar Mbow",
-        "reference": "REF001",
-        "date": "2022-01-01",
-        "mois": "Janvier",
-        "montant": 50000,
-        "type": "Inscription",
-        "statut": "Payé"
-      },
-      {
-        "id": "2",
-        "paiementID": 2,
-        "etudiant": "Rama Lo",
-        "reference": "REF002",
-        "date": "2022-01-01",
-        "mois": "Janvier",
-        "montant": 50000,
-        "type": "Inscription",
-        "statut": "Payé"
-      },
-      {
-        "id": "3",
-        "paiementID": 3,
-        "etudiant": "Jojo Baldé",
-        "reference": "REF003",
-        "date": "2022-01-01",
-        "mois": "Janvier",
-        "montant": 50000,
-        "type": "Inscription",
-        "statut": "Payé"
       }
     ]
   }

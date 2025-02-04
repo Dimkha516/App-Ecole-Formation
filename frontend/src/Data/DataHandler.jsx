@@ -6,7 +6,7 @@ export default class DataHandler {
   });
 
   //   static interceptors = () => {
-  //     this.api.interceptors.request.use(
+  //     this.api.interceptors.request.use( 
   //       (config) => {
   //         const token = localStorage.getItem("token");
  

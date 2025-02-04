@@ -18,68 +18,32 @@ import {
   TextField,
 } from "@mui/material";
 import { Search as SearchIcon } from "@mui/icons-material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ShowEtudiantPaiementsDetails from "../components/Popus/Details/ShowEtudiantPaimentsDetails";
+import DataHandler from "../Data/DataHandler";
 
 const ListePaiements = () => {
+  useEffect(() => {
+    getAllPaiments();
+  }, []);
+
   const [selectedStudent, setSelectedStudent] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [filterLevel, setFilterLevel] = useState("all");
   const [filterProgram, setFilterProgram] = useState("all");
+  const [allPaiements, setAllPaiements] = useState([]);
 
-  // Données exemple
-  const students = [
-    {
-      id: 1,
-      firstName: "Jean",
-      lastName: "Dupont",
-      program: "Informatique",
-      level: "BTS",
-      lastPaymentDate: "2025-01-15",
-      totalFees: 850000,
-      totalPaid: 600000,
-      status: "En règle",
-      payments: [
-        {
-          id: 1,
-          date: "2024-09-15",
-          amount: 300000,
-          method: "Virement",
-          reference: "VIR-2024-001",
-        },
-        {
-          id: 2,
-          date: "2025-01-15",
-          amount: 300000,
-          method: "Espèces",
-          reference: "ESP-2025-001",
-        },
-      ],
-    },
-    {
-      id: 2,
-      firstName: "Marie",
-      lastName: "Martin",
-      program: "Gestion",
-      level: "Licence",
-      lastPaymentDate: "2024-12-20",
-      totalFees: 950000,
-      totalPaid: 450000,
-      status: "En retard",
-      payments: [
-        {
-          id: 3,
-          date: "2024-09-10",
-          amount: 450000,
-          method: "Chèque",
-          reference: "CHQ-2024-001",
-        },
-      ],
-    },
-  ];
+  const getAllPaiments = async () => {
+    try {
+      const response = await DataHandler.getDatas("/");
+      setAllPaiements(response.PaiementsEtudiants);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   // Filtrer les étudiants
-  const filteredStudents = students.filter((student) => {
+  const filteredStudents = allPaiements.filter((student) => {
     const searchMatch = `${student.firstName} ${student.lastName}`
       .toLowerCase()
       .includes(searchTerm.toLowerCase());
@@ -108,10 +72,12 @@ const ListePaiements = () => {
               placeholder="Rechercher un étudiant..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              InputProps={{
-                startAdornment: (
-                  <SearchIcon sx={{ color: "action.active", mr: 1 }} />
-                ),
+              slotProps={{
+                input: {
+                  startAdornment: (
+                    <SearchIcon sx={{ color: "action.active", mr: 1 }} />
+                  ),
+                },
               }}
             />
 
@@ -188,7 +154,8 @@ const ListePaiements = () => {
         </CardContent>
       </Card>
       {selectedStudent && (
-        <ShowEtudiantPaiementsDetails selected 
+        <ShowEtudiantPaiementsDetails
+          selected
           student={selectedStudent}
           onClose={() => setSelectedStudent(null)}
         />

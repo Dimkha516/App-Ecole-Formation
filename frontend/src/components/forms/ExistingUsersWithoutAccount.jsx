@@ -54,6 +54,8 @@ const ExistingUsersWithoutAccount = () => {
           { value: "enseignant", label: "Enseignant" },
           { value: "étudiant", label: "Etudiant" },
         ]}
+        renderActions={() => null} // Suppression des actions par défaut  
+        functionToExecute={() => null} // Suppression des actions par défaut
       />
     </>
   );
