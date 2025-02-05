@@ -45,10 +45,14 @@ const userSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  createdBy:{
+    type: String,
+    required: [true, "ID admin obligatoire"]
+  },
   lastConnexion: {
     type: Date,
     default: null,
-  },
+  },  
 
   status: {
     type: String,
