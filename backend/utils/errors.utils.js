@@ -15,18 +15,33 @@ module.exports.signInError = (err) => {
   return errors;
 };
 
-module.exports.registerError = (err) => {
+const extractErrorMessages = (err, fields) => {
   let errors = {};
+
+  // Cas des erreurs de validation Mongoose
   if (err.errors) {
-    if (err.errors.prenom) errors.prenom = err.errors.prenom.message;
-    if (err.errors.nom) errors.nom = err.errors.nom.message;
-    if (err.errors.email) errors.email = err.errors.email.message;
-    if (err.errors.password) errors.password = err.errors.password.message;
-    if (err.errors.confirmPassword)
-      errors.confirmPassword = err.errors.confirmPassword.message;
-    if (err.errors.profil) errors.profil = err.errors.profil.message;
-    if (err.errors.status) errors.status = err.errors.status.message;
+    fields.forEach(field => {
+      if (err.errors[field]) {
+        errors[field] = err.errors[field].message;
+      }
+    });
+  } 
+
+  // Cas des erreurs de duplication (email unique)
+  if (err.code === 11000) {
+    if (err.keyPattern && err.keyValue) {
+      Object.keys(err.keyPattern).forEach(key => {
+        errors[key] = `${key} existe déjà`;
+      });
+    }
   }
 
   return errors;
 };
+
+module.exports.registerError = (err) => {
+  return extractErrorMessages(err, [
+    'prenom', 'nom', 'email', 'password', 'profil', 'status', 'createdBy'
+  ]);
+};
+

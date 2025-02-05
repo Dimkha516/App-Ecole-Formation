@@ -6,6 +6,7 @@ module.exports.checkUser = (req, res, next) => {
   if (token) {
     jwt.verify(token, process.env.SECRET_TOKEN, async (err, decodedToken) => {
       if (err) {
+        console.log("No connected user");
         res.locals.user = null;
         next();
       } else {
@@ -36,4 +37,13 @@ module.exports.requireAuth = (req, res, next) => {
     res.status(401).json({ message: "Token not provided." });
     console.log("No Token");
   }
+};
+
+module.exports.isAuthenticated = (req, res, next) => {
+  if (!res.locals.user) {
+    return res.status(401).json({
+      message: "From isAuthenticate: Veuillez vous connecter d'abord",
+    });
+  }
+  next();
 };

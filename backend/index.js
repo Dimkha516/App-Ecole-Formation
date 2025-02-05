@@ -19,13 +19,16 @@ app.use(cookieParser());
 connectDatabase();
 
 // JWT:
-app.get("*", checkUser);
+// app.get("*", checkUser);
+app.use(checkUser);
 app.get("/jwt", requireAuth, (req, res) => {
   res.status(200).send(res.locals.user.id);
 });
 
+
 // ROUTES
 app.use("/api/v1/users", userRoutes);
+
 
 // SERVER
 app.listen(process.env.PORT, () => {
